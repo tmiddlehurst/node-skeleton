@@ -1,0 +1,19 @@
+{
+  "name": "what-do-i-watch",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmiddlehurst/what-to-watch.git"
+  },
+  "author": "Tom Middlehurst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmiddlehurst/what-to-watch/issues"
+  },
+  "homepage": "https://github.com/tmiddlehurst/what-to-watch#readme",
+  "description": ""
+}
