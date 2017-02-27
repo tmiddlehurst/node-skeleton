@@ -15,5 +15,10 @@
     "url": "https://github.com/tmiddlehurst/what-to-watch/issues"
   },
   "homepage": "https://github.com/tmiddlehurst/what-to-watch#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5"
+  }
 }
