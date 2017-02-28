@@ -1,3 +1,30 @@
 body {
-	background-color: aquamarine;
+}
+
+.getStarted {
+	margin: auto;
+	-moz-box-shadow: 14px 15px 14px -7px #1c415e;
+	-webkit-box-shadow: 14px 15px 14px -7px #1c415e;
+	box-shadow: 14px 15px 14px -7px #1c415e;
+	background-color:#fdfffc;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:3px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#214663;
+	font-family: FightThis; Trebuchet MS;
+	font-size:28px;
+	font-weight:bold;
+	padding:24px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #adb8b6;
+}
+.myButton:hover {
+	background-color:#fafafa;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }

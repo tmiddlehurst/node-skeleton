@@ -2,39 +2,40 @@
 <html ng-app="whatToWatch">
   <head>
     <title>What to watch</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<!-- angular -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
-<!-- angular - ui-router -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-<!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-<!-- angular - firebase -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-<!-- app.js(router) -->
-  <script type="text/javascript" src = 'js/app.js'></script>
-<!-- auth controller -->
-  <script src="js/controllers/auth.ctrl.js"></script>
-    
+    <script type="text/javascript" src = 'js/app.js'></script>
+    <script src="js/controllers/auth.ctrl.js"></script>
+    <script src="js/factories/auth.fact.js"></script>
+      
   </head>
 
 
   <body ng-controller="authenticationController as auth" >
     <!-- Your angular app -->
-    hello
-    {{ 3+3 }}
 
-    <nav>
-      <ul>
-        <a href="#" ui-sref="signup"> Sign Up</a>
-      </ul>
-    </nav>
+    <div ng-if="auth.user">
+      <strong>WELCOME {{ auth.user.email }} </strong>
+      <br>
+      <a href="#" ng-click="auth.signOut()"> Sign Out</a>
+    </div>
 
-    <section ui-view></section>
+    <div ng-if="!auth.user">
+      <strong>Welcome New Person!</strong>
+      <br>
+      <a href="#" ui-sref="login">Login</a>
+      <a href="#" ui-sref="signup">Sign up</a>
+    </div>
+
+    <section ui-view ></section>
   </body>
 </html>
 

@@ -12,7 +12,7 @@ function authenticationController (Auth, $state) {
 	// 			resetCredentials();
 	// 		})
 	// 		.catch(function (error) {
-	// 			self.errorn = error
+	// 			self.error = error
 	// 		})
 	// }
 

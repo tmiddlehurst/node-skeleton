@@ -4,7 +4,7 @@ angular
 
 function AuthCatcher ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-    if (error === "AUTH_REQUIRED") $state.go('authRequired')
+    if (error === "AUTH_REQUIRED") $state.go('authrequired')
   })
 }
 
@@ -20,23 +20,23 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/states/home.html',
+      templateUrl: 'js/states/home.html',
     })
     .state('movie', {
       url: '/movie',
-      templateUrl: '/states/movie.html',
+      templateUrl: 'js/states/movie.html',
       resolve: authRequired
     })
     .state('signup', {
       url: '/signup',
-      templateUrl: '/states/signup.html'
+      templateUrl: 'js/states/signup.html'
     })
     .state('login', {
       url: '/login',
-      templateUrl: '/states/login.html'
+      templateUrl: 'js/states/login.html'
     })
     .state( 'authrequired', {
       url: '/authrequired',
-      templateUrl: '/states/authrequired.html'
+      templateUrl: 'js/states/authrequired.html'
     })
 }	
