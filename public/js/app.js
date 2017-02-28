@@ -2,20 +2,20 @@ angular
 	.module("whatToWatch", ['ui.router', 'firebase'])
 	.config(MainRouter)
 
-// function AuthCatcher ($rootScope, $state) {
-//   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-//     if (error === "AUTH_REQUIRED") $state.go('authRequired')
-//   })
-// }
+function AuthCatcher ($rootScope, $state) {
+  $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+    if (error === "AUTH_REQUIRED") $state.go('authRequired')
+  })
+}
 
 function MainRouter ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/')
 
-  // var authRequired = {
-  //   currentAuth: function (Auth) {
-  //     return Auth.$requireSignIn()
-  //   }
-  // }
+  var authRequired = {
+    currentAuth: function (Auth) {
+      return Auth.$requireSignIn()
+    }
+  }
 
   $stateProvider
     .state('home', {
