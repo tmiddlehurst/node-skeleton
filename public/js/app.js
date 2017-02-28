@@ -35,8 +35,8 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       url: '/login',
       templateUrl: '/states/login.html'
     })
-    .state( 'authRequired', {
+    .state( 'authrequired', {
       url: '/authrequired',
-      templateUrl: '/states/authRequired.html'
+      templateUrl: '/states/authrequired.html'
     })
 }	
