@@ -1,6 +1,7 @@
 angular
 	.module("whatToWatch", ['ui.router', 'firebase'])
 	.config(MainRouter)
+  .run(AuthCatcher)
 
 function AuthCatcher ($rootScope, $state) {
   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
@@ -41,6 +42,7 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     })
     .state('getstarted', {
       url: '/getstarted',
-      templateUrl: 'js/states/getstarted'
+      templateUrl: 'js/states/getstarted.html',
+      resolve: authRequired
     })
 }	

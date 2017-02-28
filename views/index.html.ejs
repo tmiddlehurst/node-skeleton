@@ -23,22 +23,22 @@
 
   <body ng-controller="authenticationController as auth" >
     <!-- Your angular app -->
+    <section>
+      <a href="#" ui-sref="home">Home</a>
 
-    <a href="#" ui-sref="home">Home</a>
+      <div ng-if="auth.user">
+        <strong>WELCOME {{ auth.user.email }} </strong>
+        <br>
+        <a href="#" ng-click="auth.signOut()"> Sign Out</a>
+      </div>
 
-    <div ng-if="auth.user">
-      <strong>WELCOME {{ auth.user.email }} </strong>
-      <br>
-      <a href="#" ng-click="auth.signOut()"> Sign Out</a>
-    </div>
-
-    <div ng-if="!auth.user">
-      <strong>Welcome New Person!</strong>
-      <br>
-      <a href="#" ui-sref="login">Login</a>
-      <a href="#" ui-sref="signup">Sign up</a>
-    </div>
-
+      <div ng-if="!auth.user">
+        <strong>Welcome New Person!</strong>
+        <br>
+        <a href="#" ui-sref="login">Login</a>
+        <a href="#" ui-sref="signup">Sign up</a>
+      </div>
+    </section>
     <section ui-view ></section>
   </body>
 </html>
