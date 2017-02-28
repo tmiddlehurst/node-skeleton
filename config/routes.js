@@ -1,6 +1,5 @@
 var express = require('express')
 var router = express.Router()
-
 var usersController = require('../controllers/users.js');
 
 // http://127.0.0.1:3000/users
