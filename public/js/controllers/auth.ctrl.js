@@ -2,7 +2,7 @@ angular
 	.module('whatToWatch')
 	.controller('authenticationController', authenticationController)
 
-function authenticationController (Auth, $state) {
+function authenticationController (Auth, User, $state) {
 	var self = this;
 
 	self.signIn = function () {
@@ -20,9 +20,17 @@ function authenticationController (Auth, $state) {
 
 		Auth.$createUserWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
-				resetCredentials();
+				// resetCredentials();
 				console.log(user);
-				$state.go('getstarted')
+				User.create({
+					uid: user.uid
+				}).then(function (dbUser) {
+					$state.go('getstarted')
+				}).catch(function (err) {
+					console.log(err)
+				})
+
+
 			}).catch(function (error) {
 				self.error = error;
 			})

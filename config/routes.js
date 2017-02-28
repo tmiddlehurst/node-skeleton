@@ -4,23 +4,21 @@ var usersController = require('../controllers/users.js');
 
 // http://127.0.0.1:3000/users
 router.route('/users')
-
-  //POST a new blob
-  .post(usersController.createUser);
+  .post(usersController.create);
 
 
 router.route('/users/:id')
 
   // GET return specific User
-  .get(usersController.getUser)
+  // .get(usersController.getUser)
 
   // PATCH update existing User
-  .patch(usersController.updateUser)
+  // .patch(usersController.updateUser)
 
   // DELETE remove specific User from DB
-  .delete(usersController.removeUser);
+  // .delete(usersController.removeUser);
 
-  .get(usersController.edit);
+  // .get(usersController.edit);
 
 
 module.exports = router

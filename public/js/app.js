@@ -1,6 +1,7 @@
 angular
 	.module("whatToWatch", ['ui.router', 'firebase'])
 	.config(MainRouter)
+  .constant('API', '/api')
   .run(AuthCatcher)
 
 function AuthCatcher ($rootScope, $state) {
