@@ -39,4 +39,8 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       url: '/authrequired',
       templateUrl: 'js/states/authrequired.html'
     })
+    .state('getstarted', {
+      url: '/getstarted',
+      templateUrl: 'js/states/getstarted'
+    })
 }	

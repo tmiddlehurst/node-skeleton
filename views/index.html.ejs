@@ -21,9 +21,10 @@
       
   </head>
 
-
   <body ng-controller="authenticationController as auth" >
     <!-- Your angular app -->
+
+    <a href="#" ui-sref="home">Home</a>
 
     <div ng-if="auth.user">
       <strong>WELCOME {{ auth.user.email }} </strong>

@@ -5,16 +5,16 @@ angular
 function authenticationController (Auth, $state) {
 	var self = this;
 
-	// self.signIn = function () {
-	// 	Auth.$signInWithEmailAndPassword(self.email, self.password)
-	// 		.then (function (user) {
-	// 			$state.go('secret');
-	// 			resetCredentials();
-	// 		})
-	// 		.catch(function (error) {
-	// 			self.error = error
-	// 		})
-	// }
+	self.signIn = function () {
+		Auth.$signInWithEmailAndPassword(self.email, self.password)
+			.then (function (user) {
+				$state.go('secret');
+				resetCredentials();
+			})
+			.catch(function (error) {
+				self.error = error
+			})
+	}
 
 	self.createUser = function () {
 
