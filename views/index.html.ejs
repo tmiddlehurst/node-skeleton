@@ -23,9 +23,17 @@
   </head>
 
 
-  <body>
+  <body ng-controller="authenticationController as auth" >
     <!-- Your angular app -->
     hello
     {{ 3+3 }}
+
+    <nav>
+      <ul>
+        <a href="#" ui-sref="signup"> Sign Up</a>
+      </ul>
+    </nav>
+
+    <section ui-view></section>
   </body>
 </html>
