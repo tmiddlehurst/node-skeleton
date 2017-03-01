@@ -12,7 +12,8 @@ function  search (req, res) {
 			console.log(error)
 			return res.status(500).json(error)
 		}
-		res.json(body)
+		res.json(body);
+		console.log(body.results[id])
 	})
 
 }

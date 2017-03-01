@@ -13,9 +13,10 @@
 				placeholder="Enter movie"
 		</div>
 		<button
-			type="go"
+			type="search"
 			class="btn btn-default"
-			ng-click="auth.results()">
+			ng-click="auth.results()"
+			ng-model="searchCTRL.searchTerm"=>
 			Go
 		</button>
 
