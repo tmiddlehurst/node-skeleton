@@ -23,6 +23,7 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'js/states/home.html',
+      resolve: authRequired
     })
     .state('movie', {
       url: '/movie',

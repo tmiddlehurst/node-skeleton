@@ -3,7 +3,7 @@ angular
 	.factory('Movie', movieFactory)
 function movieFactory (API, $http) {
 	return {
-		search:function(searchTerm) {
+		search: function(searchTerm) {
 			return $http.post(API + '/search', searchTerm)
 
 		}

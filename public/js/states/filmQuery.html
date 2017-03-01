@@ -10,13 +10,13 @@
 			<input
 				id="favouriteMovie"
 				type="string"
-				placeholder="Enter movie">
+				placeholder="Enter movie"
+				ng-model="movie.searchTerm">
 		</div>
 		<button
 			type="search"
 			class="btn btn-default"
-			ng-click="movie.search()"
-			ng-model="movieCTRL.searchTerm">
+			ng-click="movie.search()">
 			Go
 		</button>
 

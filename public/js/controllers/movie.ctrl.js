@@ -7,6 +7,13 @@ function movieController (Movie) {
 	self.searchTerm = '';
 
 	self.search = function () {
-		Movie.search(self.searchTerm)
+		Movie.search({ term: self.searchTerm})
+			.then(function (res) {
+				var data = JSON.parse(res.data)
+				console.log(data)
+			})
+			.catch(function (err) {
+				console.log(err)
+			})
 	}
 }

@@ -4,7 +4,8 @@ var baseUrl = 'https://api.themoviedb.org/3/search/movie?api_key=' + process.env
 console.log(baseUrl)
 
 function search (req, res) {
-	var searchParams = req.body.searchTerm
+	var searchParams = req.body.term
+	console.log(req.body)
 	if (!searchParams) return res.status(500).send()
 
 	request(baseUrl + '&query=' + searchParams, function (error, response, body) {
