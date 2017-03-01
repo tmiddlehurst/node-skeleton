@@ -25,8 +25,9 @@
   <body ng-controller="authenticationController as auth" >
 
     <!-- Your angular app -->
-    <section class="container">
-      <div id=>
+
+    <section id="header">
+      <nav>
         <a href="#" ui-sref="home">Home</a>
         <div ng-if="auth.user">
           <strong>WELCOME {{ auth.user.email }} </strong>
@@ -39,7 +40,9 @@
           <a href="#" ui-sref="login">Login</a>
           <a href="#" ui-sref="signup">Sign up</a>
         </div>
-      </div>
+      </nav>    
+    </section>
+    <section class="container">
       <div ui-view></div>
     </section>
   </body>
