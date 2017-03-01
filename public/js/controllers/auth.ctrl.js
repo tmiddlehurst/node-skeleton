@@ -8,7 +8,7 @@ function authenticationController (Auth, User, $state) {
 	self.signIn = function () {
 		Auth.$signInWithEmailAndPassword(self.email, self.password)
 			.then (function (user) {
-				$state.go('getstarted');
+				$state.go('home');
 				resetCredentials();
 			})
 			.catch(function (error) {
@@ -25,7 +25,7 @@ function authenticationController (Auth, User, $state) {
 				User.create({
 					uid: user.uid
 				}).then(function (dbUser) {
-					$state.go('getstarted')
+					$state.go('home')
 				}).catch(function (err) {
 					console.log(err)
 				})
