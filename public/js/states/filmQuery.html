@@ -1,0 +1,24 @@
+<section id="filmQuery">
+	<br>
+	<p class="centered text">
+		To get started, enter your favourite film.
+	</p>
+	<br>
+	<form class="col-xs-9" class="form-inline" ng-if="!auth.user">
+		<div class="form-group">
+			<label for="favouriteMovie">Favourite movie:</label>
+			<input
+				id="favouriteMovie"
+				type="string"
+				placeholder="Enter movie"
+		</div>
+		<button
+			type="go"
+			class="btn btn-default"
+			ng-click="auth.results()">
+			Go
+		</button>
+
+		</p>
+	</form>
+</section>

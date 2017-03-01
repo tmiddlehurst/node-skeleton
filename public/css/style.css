@@ -2,11 +2,12 @@ body, section, div {
 	/*border: 1px solid black;*/
 	box-sizing: border-box;
 	color:#214663;
+	font-family: "Helvetica neue";
 }
 
 a {
 	font-family: "Komoda"; Trebuchet MS;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: bold;
 	letter-spacing: 2px;
     color: #214663 !important;
