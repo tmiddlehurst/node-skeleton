@@ -6,7 +6,7 @@ body, section, div {
 
 a {
 	font-family: "Komoda"; Trebuchet MS;
-	font-size: 30px;
+	font-size: 3em;
 	font-weight: bold;
 	letter-spacing: 2px;
     color: #214663 !important;
@@ -41,6 +41,14 @@ main {
 	height: 60%;
 	width: 100%;
 }
+.navHome {
+	margin: 1.5%;
+	display: inline-block;
+	float: left;
+	width: 10%;
+	height: 100%;
+	text-align: center;
+}
 
 .navLink {
 	margin: 1.5%;
@@ -59,7 +67,7 @@ main {
 
 .centeredText {
 	margin: auto;
-	font-size: 20px;
+	font-size: 2em;
 	text-align: center;
 }
 
