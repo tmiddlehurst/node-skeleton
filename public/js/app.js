@@ -43,7 +43,7 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     })
     .state('filmQuery', {
       url: '/filmquery',
-      templateUrl: 'js/states/filmquery.html',
+      templateUrl: 'js/states/filmQuery.html',
       resolve: authRequired
     })
 }	

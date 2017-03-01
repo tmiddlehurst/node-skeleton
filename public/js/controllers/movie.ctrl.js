@@ -2,11 +2,11 @@ angular
 	.module('whatToWatch')
 	.controller('movieController', movieController)
 
-function movieController (movie) {
+function movieController (Movie) {
 	var self = this;
-	self.movieTerm = '';
+	self.searchTerm = '';
 
-	self.movie = function () {
+	self.search = function () {
 		Movie.search(self.searchTerm)
 	}
 }

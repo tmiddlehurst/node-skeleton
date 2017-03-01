@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var usersController = require('../controllers/users.js');
-var searchController = require('../controllers/search.js');
+var movieController = require('../controllers/movie.js');
 
 // http://127.0.0.1:3000/users
 router.route('/users')
@@ -25,7 +25,7 @@ router.route('/users/:id')
  // custom routes
 router
 	.route('/search')
-	.post(searchController.search)
+	.post(movieController.search)
 
 
 module.exports = router
