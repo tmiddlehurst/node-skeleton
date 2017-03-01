@@ -1,6 +1,7 @@
 body, section, div {
 	border: 1px solid black;
 	box-sizing: border-box;
+	color:#214663;
 }
 
 .navLink {
@@ -11,9 +12,11 @@ body, section, div {
 
 	font-size: 20px;
 	text-align: center;
+
+	border: 1px solid #1c415e;
 }
 
-.glyphicon {
+.glyphicon, .fa {
 	font-size: 30px;
 }
 

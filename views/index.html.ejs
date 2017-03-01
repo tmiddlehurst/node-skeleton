@@ -5,6 +5,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -26,33 +28,41 @@
 
     <!-- Your angular app -->
 
-    <section id="header">
+    <header>
       <nav>
-        <div class="navLink" href="#" ui-sref="home">
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        <a class="navLink" href="#" ui-sref="home">
+          <span class="fa fa-home" aria-hidden="true"></span>
           <br>
           <span>Home</span>
-        </div>
+        </a>
         <div ng-if="auth.user">
 <!--           <strong>WELCOME {{ auth.user.email }} </strong>
           <br> -->
-          <div class="navLink" href="#" ng-click="auth.signOut()">
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <a class="navLink" href="#" ng-click="auth.signOut()">
+            <span class="fa fa-home" aria-hidden="true"></span>
             <br>
             <span>Sign Out</span>
-          </div>
+          </a>
         </div>
         <div ng-if="!auth.user">
-          <strong>Welcome New Person!</strong>
-          <br>
-          <a href="#" ui-sref="login">Login</a>
-          <a href="#" ui-sref="signup">Sign up</a>
+<!--           <strong>Welcome New Person!</strong>
+          <br> -->
+          <a class="navLink" href="#" ui-sref="signup">
+            <span class="fa fa-user-plus" aria-hidden="true"></span>
+            <br>
+            <span>Sign Up</span>
+          </a>
+          <a class="navLink" href="#" ui-sref="login">
+            <span class="fa fa-sign-in" aria-hidden="true"></span>
+            <br>
+            <span>Log In</span>
+          </a>
         </div>
       </nav>    
-    </section>
-    <section class="container">
+    </header>
+    <main class="container">
       <div ui-view></div>
-    </section>
+    </main>
   </body>
 </html>
 
