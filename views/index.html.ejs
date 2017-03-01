@@ -28,7 +28,11 @@
 
     <section id="header">
       <nav>
-        <a href="#" ui-sref="home">Home</a>
+        <div class="navLink" href="#" ui-sref="home">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <br>
+          <span>Home</span>
+        </div>
         <div ng-if="auth.user">
           <strong>WELCOME {{ auth.user.email }} </strong>
           <br>

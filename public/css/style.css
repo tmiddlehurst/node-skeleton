@@ -3,11 +3,19 @@ body, section, div {
 	box-sizing: border-box;
 }
 
-/*.homePage {
-	border-top: 2px solid #214663;
-	border-bottom: 2px solid #214663; 
+.navLink {
+	display: inline-block;
+	float: right;
+	width: 10%;
+	height: 100%;
+
+	font-size: 20px;
+	text-align: center;
 }
-*/
+
+.glyphicon {
+	font-size: 30px;
+}
 
 .gStartedButton {
 	margin: auto;
@@ -32,7 +40,7 @@ body, section, div {
 }
 .gStartedButton:hover {
 	background-color:#fafaff;
-	border-radius: 4px
+	border-radius: 4px;
 }
 .gStartedButton:active {
 	position:relative;
