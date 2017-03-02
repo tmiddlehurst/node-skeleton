@@ -112,6 +112,10 @@ form div {
 button {
 	margin: auto; 
 }
+.card-img-top {
+	width: 150px;
+	height: 120px;
+}
 
 
 
