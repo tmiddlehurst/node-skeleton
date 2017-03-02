@@ -37,14 +37,10 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       url: '/authrequired',
       templateUrl: 'js/states/authrequired.html'
     })
-    .state('filmQuery', {
-      url: '/filmquery',
-      templateUrl: 'js/states/filmQuery.html',
-      resolve: authRequired
-    })
-    .state('searchDisplay', {
+    .state('search', {
       url: '/searchdisplay',
       templateUrl: 'js/states/searchdisplay.html',
       resolve: authRequired
-    })
+    })    
+
 }	

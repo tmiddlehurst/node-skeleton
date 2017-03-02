@@ -1,0 +1,43 @@
+<section id="search" ng-controller="movieController as movie">
+	<div>
+		<br>
+		<p class="centered text">
+			To get started, enter your favourite film.
+		</p>
+		<br>
+		<form class="col-md-8 col-md-offset-2 form-inline" ng-if="auth.user">
+			<div class="form-group">
+				<label for="favouriteMovie">Favourite movie:</label>
+				<input
+					id="favouriteMovie"
+					type="string"
+					placeholder="Enter movie"
+					ng-model="movie.searchTerm">
+			</div>
+			<button
+				type="search"
+				class="btn btn-default"
+				ng-click="movie.search()"
+				ui-sref="searchDisplay">
+				Go
+			</button>
+
+			</p>
+		</form>
+	</div>
+	<div>
+		<h2> Search Results</h2>
+
+		<p> pick your favourite to see similar films</p>
+
+		<div class="card" style="width: 50%;">
+		  <img class="card-img-top" src="'https://image.tmdb.org/t/p/w640/' + {{movie.movieResults.poster_path}}"  alt="Movie Poster">
+		  <div class="card-block">
+		    <h4 class="card-title">title{{movie.movieResults.results[0].title}}</h4>
+		    <p class="card-text"><strong>Year: </strong><span>Release Year</span></p>
+		    <p class="card-text"><strong>Avg. Rating: </strong><span>Rating</span></p>
+		    <a href="#" class="btn btn-primary">choose</a>
+		  </div>
+		</div>
+	</div>
+</section>
