@@ -6,6 +6,7 @@ function animationController () {
 	self.visible = false;
 
 	self.showContent = function () {
+		// self.visible = !self.visible
 		self.visible = true;
 	}
 }
