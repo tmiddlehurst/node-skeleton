@@ -25,11 +25,6 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       templateUrl: 'js/states/home.html',
       resolve: authRequired
     })
-    .state('movie', {
-      url: '/movie',
-      templateUrl: 'js/states/movie.html',
-      resolve: authRequired
-    })
     .state('signup', {
       url: '/signup',
       templateUrl: 'js/states/signup.html'
@@ -38,13 +33,18 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       url: '/login',
       templateUrl: 'js/states/login.html'
     })
-    .state( 'authrequired', {
+    .state('authrequired', {
       url: '/authrequired',
       templateUrl: 'js/states/authrequired.html'
     })
     .state('filmQuery', {
       url: '/filmquery',
       templateUrl: 'js/states/filmQuery.html',
+      resolve: authRequired
+    })
+    .state('searchDisplay', {
+      url: '/searchdisplay',
+      templateUrl: 'js/states/searchDisplay',
       resolve: authRequired
     })
 }	
