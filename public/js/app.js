@@ -38,8 +38,8 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       templateUrl: 'js/states/authrequired.html'
     })
     .state('search', {
-      url: '/searchdisplay',
-      templateUrl: 'js/states/searchdisplay.html',
+      url: '/search',
+      templateUrl: 'js/states/search.html',
       resolve: authRequired
     })    
 
