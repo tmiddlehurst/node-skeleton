@@ -6,7 +6,6 @@ function movieController (Movie) {
 	var self = this;
 	self.searchTerm = '';
 	self.movieResults = '';
-	self.selfco
 
 	self.search = function () {
 		Movie.search({ term: self.searchTerm})
