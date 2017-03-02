@@ -3,10 +3,11 @@ angular
 	.controller('animationController', animationController)
 function animationController () {
 	var self = this;
-	self.visible = false;
+	self.visible=true;
 
 	self.showContent = function () {
-		// self.visible = !self.visible
-		self.visible = true;
+		console.log(self.visible);
+		self.visible = false;
+		console.log(self.visible);
 	}
 }

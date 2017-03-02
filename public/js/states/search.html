@@ -1,9 +1,10 @@
 <section id="search" ng-controller="movieController as movie">
 	<!-- Search Bar -->
-	<div class="row" ng-controller="animationController as anim">
+	<div class="row">
 		<br>
 		<p 
-			class="centeredText">
+			class="centeredText"
+			ng-if="movie.visible">
 			To get started, enter your favourite film.
 		</p>
 		<br>
@@ -28,10 +29,10 @@
 
 			</p>
 		</form>
-
+	</div>		
 	<!-- Search Results -->
-		<h2> Search Results</h2>
-
+	<div class="row">
+		<h2 ng-if="!movie.visible"> Search Results</h2>
 		<div 
 			class="card col-xs-3" 
 			ng-repeat="movie in movie.movieResults.results | limitTo: 15"
