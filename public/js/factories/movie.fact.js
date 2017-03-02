@@ -1,5 +1,5 @@
 angular
-	.module('whatToWatch')
+	.module('takeOne')
 	.factory('Movie', movieFactory)
 function movieFactory (API, $http) {
 	return {

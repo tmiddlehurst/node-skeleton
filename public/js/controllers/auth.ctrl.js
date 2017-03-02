@@ -1,5 +1,5 @@
 angular
-	.module('whatToWatch')
+	.module('takeOne')
 	.controller('authenticationController', authenticationController)
 
 function authenticationController (Auth, User, $state) {

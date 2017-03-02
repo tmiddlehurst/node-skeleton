@@ -1,5 +1,5 @@
 angular
-	.module("whatToWatch", ['ui.router', 'firebase'])
+	.module("takeOne", ['ui.router', 'firebase'])
 	.config(MainRouter)
   .constant('API', '/api')
   .run(AuthCatcher)

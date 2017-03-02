@@ -1,11 +1,12 @@
 angular
-	.module('whatToWatch')
+	.module('takeOne')
 	.controller('movieController', movieController)
 
 function movieController (Movie) {
 	var self = this;
 	self.searchTerm = '';
 	self.movieResults = '';
+	self.selfco
 
 	self.search = function () {
 		Movie.search({ term: self.searchTerm})
