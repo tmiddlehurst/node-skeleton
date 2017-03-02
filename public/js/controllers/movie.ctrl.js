@@ -13,9 +13,6 @@ function movieController (Movie) {
 				self.movieResults = JSON.parse(res.data)
 				console.log(self.movieResults)
 			})
-			.catch(function (err) {
-				console.log(err)
-			})
 	}
 	self.printMovieResults = function() {
 		console.log(self.movieResults);

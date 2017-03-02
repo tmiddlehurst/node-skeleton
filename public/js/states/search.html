@@ -1,11 +1,15 @@
 <section id="search" ng-controller="movieController as movie">
-	<div>
+	<!-- Search Bar -->
+	<div class="row">
 		<br>
-		<p class="centered text">
+		<p class="centeredText">
 			To get started, enter your favourite film.
 		</p>
 		<br>
-		<form class="col-md-8 col-md-offset-2 form-inline" ng-if="auth.user">
+		<form
+			id="searchBar"
+			class="col-md-8 col-md-offset-2 form-inline" 
+			ng-if="auth.user">
 			<div class="form-group">
 				<label for="favouriteMovie">Favourite movie:</label>
 				<input
@@ -24,27 +28,13 @@
 			</p>
 		</form>
 	</div>
-	<div>
+	<!-- Search Results -->
+	<div class="row">
 		<h2> Search Results</h2>
-
-<!-- 		<div class="card"  ng-repeat="results in movie.movieResults track by $index | limitTo: 2">
-		  <img 
-		  	class="card-img-top"
-		  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.movieResults.results[$index].poster_path}}"
-		  	alt="{{movie.movieResults.results[$index].title}} Movie Poster">
-		  <div class="card-block">
-		    <p class="card-title"><strong>Title: </strong>{{movie.movieResults.results[$index].title}}</p>
-		    <p class="card-text"><strong>Year: </strong><span>{{movie.movieResults.results[$index].release_date.substr(0,4)}}</span></p>
-		    <p class="card-text">
-		    	<strong>Avg. Rating: </strong>
-		    	<span>{{movie.movieResults.results[$index].vote_average}}</span>
-		    	<span>({{movie.movieResults.results[$index].vote_count}} votes)</span>
-	    	</p>
-		    <a href="#" class="btn btn-primary">choose</a>
-		  </div>
-		</div> -->
-
-		<div ng-repeat="movie in movie.movieResults.results | limitTo: 15">
+		<div 
+			class="card col-xs-3" 
+			ng-repeat="movie in movie.movieResults.results | limitTo: 15"
+			href="show">
 			<img 
 			  	class="card-img-top"
 			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
