@@ -44,7 +44,7 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     })
     .state('searchDisplay', {
       url: '/searchdisplay',
-      templateUrl: 'js/states/searchDisplay',
+      templateUrl: 'js/states/searchdisplay.html',
       resolve: authRequired
     })
 }	
