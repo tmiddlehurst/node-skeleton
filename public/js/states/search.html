@@ -27,12 +27,10 @@
 	<div>
 		<h2> Search Results</h2>
 
-		<p> pick your favourite to see similar films</p>
-
-		<div class="card" style="width: 33%;" ng-repeat="results in movie.movieResults track by $index">
+<!-- 		<div class="card"  ng-repeat="results in movie.movieResults track by $index | limitTo: 2">
 		  <img 
 		  	class="card-img-top"
-		  	src="https://image.tmdb.org/t/p/w640/{{[$index].poster_path}}"
+		  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.movieResults.results[$index].poster_path}}"
 		  	alt="{{movie.movieResults.results[$index].title}} Movie Poster">
 		  <div class="card-block">
 		    <p class="card-title"><strong>Title: </strong>{{movie.movieResults.results[$index].title}}</p>
@@ -44,6 +42,27 @@
 	    	</p>
 		    <a href="#" class="btn btn-primary">choose</a>
 		  </div>
+		</div> -->
+
+		<div ng-repeat="movie in movie.movieResults.results | limitTo: 15">
+			<img 
+			  	class="card-img-top"
+			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
+			  	alt="{{movie.title}} Movie Poster">
+		  	<div class="card-block">
+		  		<p class="card-title">
+		  			<strong>Title: </strong>
+		  			{{movie.title}}
+	  			</p>
+	  			<p class="card-text">
+	  				<strong>Year: </strong><span>{{movie.release_date.substr(0,4)}}</span>
+  				</p>
+	  			<p class="card-text">
+		    		<strong>Avg. Rating: </strong>
+		    		<span>{{movie.vote_average}}</span>
+		    		<span>({{movie.vote_count}} votes)</span>
+	    		</p>
+		  	</div>
 		</div>
 	</div>
 </section>
