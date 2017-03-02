@@ -29,18 +29,18 @@
 
 		<p> pick your favourite to see similar films</p>
 
-		<div class="card" style="width: 50%;">
+		<div class="card" style="width: 33%;" ng-repeat="results in movie.movieResults track by $index">
 		  <img 
 		  	class="card-img-top"
-		  	src="https://image.tmdb.org/t/p/w640/{{movie.movieResults.results[0].poster_path}}"
-		  	alt="{{movie.movieResults.results[0].title}} Movie Poster">
+		  	src="https://image.tmdb.org/t/p/w640/{{[$index].poster_path}}"
+		  	alt="{{movie.movieResults.results[$index].title}} Movie Poster">
 		  <div class="card-block">
-		    <p class="card-title"><strong>Title: </strong>{{movie.movieResults.results[0].title}}</p>
-		    <p class="card-text"><strong>Year: </strong><span>{{movie.movieResults.results[0].release_date.substr(0,4)}}</span></p>
+		    <p class="card-title"><strong>Title: </strong>{{movie.movieResults.results[$index].title}}</p>
+		    <p class="card-text"><strong>Year: </strong><span>{{movie.movieResults.results[$index].release_date.substr(0,4)}}</span></p>
 		    <p class="card-text">
 		    	<strong>Avg. Rating: </strong>
-		    	<span>{{movie.movieResults.results[0].vote_average}}</span>
-		    	<span>({{movie.movieResults.results[0].vote_count}} votes)</span>
+		    	<span>{{movie.movieResults.results[$index].vote_average}}</span>
+		    	<span>({{movie.movieResults.results[$index].vote_count}} votes)</span>
 	    	</p>
 		    <a href="#" class="btn btn-primary">choose</a>
 		  </div>
