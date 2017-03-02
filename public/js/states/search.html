@@ -1,10 +1,10 @@
-<section id="search" ng-controller="movieController as movie">
+<section id="search" ng-controller="movieController as movieCTRL">
 	<!-- Search Bar -->
 	<div class="row">
 		<br>
 		<p 
 			class="centeredText"
-			ng-if="movie.visible">
+			ng-if="movieCTRL.visible">
 			To get started, enter your favourite film.
 		</p>
 		<br>
@@ -18,12 +18,12 @@
 					id="favouriteMovie"
 					type="string"
 					placeholder="Enter movie"
-					ng-model="movie.searchTerm">
+					ng-model="movieCTRL.searchTerm">
 			</div>
 			<button
 				type="search"
 				class="btn btn-default"
-				ng-click="movie.search()">
+				ng-click="movieCTRL.search()">
 				Go
 			</button>
 
@@ -32,11 +32,12 @@
 	</div>		
 	<!-- Search Results -->
 	<div class="row">
-		<h2 ng-if="!movie.visible"> Search Results</h2>
+		<h2 ng-if="!movieCTRL.visible"> Search Results</h2>
 		<div 
 			class="card col-xs-3" 
-			ng-repeat="movie in movie.movieResults.results | limitTo: 15"
-			href="show">
+			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
+			ui-sref="showSimilar"
+			ng-click="movieCTRL.storeId(movie)">
 			<img 
 			  	class="card-img-top"
 			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"

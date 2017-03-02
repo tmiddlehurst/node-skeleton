@@ -25,4 +25,9 @@ function movieController (Movie) {
 	self.printMovieResults = function() {
 		console.log(self.movieResults);
 	}
+	self.storeId = function (individualMovie) {
+		self.selected = individualMovie.id;
+		console.log(selected);
+	}
+
 }

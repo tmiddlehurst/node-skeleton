@@ -44,7 +44,7 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     })
     .state('showSimilar', {
       url:'/showsimilar',
-      templateUrl: '/js/states/showsimilar',
+      templateUrl: '/js/states/showsimilar.html',
       resolve: authRequired
     })    
 
