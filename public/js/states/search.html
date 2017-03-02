@@ -30,11 +30,18 @@
 		<p> pick your favourite to see similar films</p>
 
 		<div class="card" style="width: 50%;">
-		  <img class="card-img-top" src="'https://image.tmdb.org/t/p/w640/' + {{movie.movieResults.poster_path}}"  alt="Movie Poster">
+		  <img 
+		  	class="card-img-top"
+		  	src="https://image.tmdb.org/t/p/w640/{{movie.movieResults.results[0].poster_path}}"
+		  	alt="{{movie.movieResults.results[0].title}} Movie Poster">
 		  <div class="card-block">
-		    <h4 class="card-title">title{{movie.movieResults.results[0].title}}</h4>
-		    <p class="card-text"><strong>Year: </strong><span>Release Year</span></p>
-		    <p class="card-text"><strong>Avg. Rating: </strong><span>Rating</span></p>
+		    <h4 class="card-title"><strong>Title: </strong>{{movie.movieResults.results[0].title}}</h4>
+		    <p class="card-text"><strong>Year: </strong><span>{{movie.movieResults.results[0].release_date.substr(0,4)}}</span></p>
+		    <p class="card-text">
+		    	<strong>Avg. Rating: </strong>
+		    	<span>{{movie.movieResults.results[0].vote_average}}</span>
+		    	<span>({{movie.movieResults.results[0].vote_count}} votes)</span>
+	    	</p>
 		    <a href="#" class="btn btn-primary">choose</a>
 		  </div>
 		</div>

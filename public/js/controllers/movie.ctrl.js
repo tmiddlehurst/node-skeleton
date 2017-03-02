@@ -8,7 +8,7 @@ function movieController (Movie) {
 	self.search = function () {
 		Movie.search({ term: self.searchTerm})
 			.then(function (res) {
-				self.movieResults = JSON.parse(res.data).results[0].title
+				self.movieResults = JSON.parse(res.data)
 				console.log(self.movieResults)
 				console.log(self.movieResults.results[0].title)
 			})
