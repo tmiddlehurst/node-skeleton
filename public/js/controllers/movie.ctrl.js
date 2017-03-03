@@ -7,6 +7,7 @@ function movieController (Movie) {
 	self.searchTerm = '';
 	self.searchResults ='';
 
+	self.selected = '';
 	self.selectedId ='';
 	self.similarMovies = '';
 
@@ -24,9 +25,9 @@ function movieController (Movie) {
 
 // Store id of selected favourite movie
 	self.storeId = function (individualMovie) {
+		self.selected = individualMovie
 		self.selectedId = individualMovie.id
-		console.log(self.selectedId)
-		console.log(individualMovie.id)
+
 		// Find similar movies to selected movie
 		Movie.showSimilar({ id: self.selectedId})
 			.then (function (res) {
