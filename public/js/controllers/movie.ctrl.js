@@ -5,18 +5,13 @@ angular
 function movieController (Movie) {
 	var self = this;
 	self.searchTerm = '';
-	self.movieResults = '';
-	self.similarTo = '';
-	self.selected ='';
-	self.visible=true;
+	self.showSimilar ='';
+	self.visible = true;
 	self.searchResults ='';
+	self.selectedId ='';
+	self.similarMovies = '';
 
-	self.showContent = function () {
-		console.log(self.visible);
-		self.visible = false;
-		console.log(self.visible);
-	}
-
+	// Search for favourite movie
 	self.search = function () {
 		Movie.search({ term: self.searchTerm})
 			.then(function (res) {
@@ -25,16 +20,27 @@ function movieController (Movie) {
 				console.log(self.movieResults)
 			})
 	}
-	self.showSimilar = function () {
-		console.log
-	}
-	self.printMovieResults = function() {
-		console.log(self.movieResults);
-	}
+	// Store id of selected favourite movie
 	self.storeId = function (individualMovie) {
 		self.selectedId = individualMovie.id;
 
+	// Find similar movies to selected movie
+	self.showSimilar = function () {
+		Movie.showSimilar({ id: self.selectedId})
+			.then (function (res) {
+				self.similarMovies = JSON.parse(res.data)
+				console.log(self.movieResults)
+			})
+	}
 		console.log(self.selectedId);
+	}
+
+	// Show/hide content
+
+		self.showContent = function () {
+		console.log(self.visible);
+		self.visible = false;
+		console.log(self.visible);
 	}
 
 }
