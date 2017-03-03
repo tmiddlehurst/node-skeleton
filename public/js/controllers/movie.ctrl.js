@@ -6,7 +6,9 @@ function movieController (Movie) {
 	var self = this;
 	self.searchTerm = '';
 	self.movieResults = '';
+	self.selected =''
 	self.visible=true;
+	self.searchResults ='';
 
 	self.showContent = function () {
 		console.log(self.visible);
@@ -26,8 +28,9 @@ function movieController (Movie) {
 		console.log(self.movieResults);
 	}
 	self.storeId = function (individualMovie) {
-		self.selected = individualMovie.id;
-		console.log(selected);
+		self.selectedId = individualMovie.id;
+
+		console.log(self.selectedId);
 	}
 
 }

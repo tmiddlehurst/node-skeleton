@@ -23,7 +23,7 @@
 			<button
 				type="search"
 				class="btn btn-default"
-				ng-click="movieCTRL.search()">
+				ng-click="movieCTRL.search().arrayLength()">
 				Go
 			</button>
 
@@ -32,7 +32,7 @@
 	</div>		
 	<!-- Search Results -->
 	<div class="row">
-		<h2 ng-if="!movieCTRL.visible"> Search Results</h2>
+		<h2 ng-if="!movieCTRL.visible"> displaying results for "{{movieCTRL.searchTerm}}"</h2>
 		<div 
 			class="card col-xs-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
