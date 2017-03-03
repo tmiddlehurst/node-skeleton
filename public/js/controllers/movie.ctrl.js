@@ -32,7 +32,7 @@ function movieController (Movie) {
 		Movie.showSimilar({ id: self.selectedId})
 			.then (function (res) {
 				self.similarMovies = JSON.parse(res.data)
-				// console.log(self.similarMovies)
+				console.log(self.similarMovies)
 			})
 	}
 
