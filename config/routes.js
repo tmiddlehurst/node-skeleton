@@ -23,9 +23,12 @@ router.route('/users/:id')
 
 
  // custom routes
-router
-	.route('/search')
+router.route('/search')
 	.post(movieController.search)
+
+router.route('/showsimilar')
+  .post(movieController.showSimilar)
+
 
 
 module.exports = router
