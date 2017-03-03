@@ -26,8 +26,8 @@ router.route('/users/:id')
 router.route('/search')
 	.post(movieController.search)
 
-// router.route('/showsimilar')
-//   .post(movieController.showSimilar)
+router.route('/showsimilar')
+  .post(movieController.showSimilar)
 
 
 
