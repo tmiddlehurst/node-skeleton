@@ -6,7 +6,8 @@ function movieController (Movie) {
 	var self = this;
 	self.searchTerm = '';
 	self.movieResults = '';
-	self.selected =''
+	self.similarTo = '';
+	self.selected ='';
 	self.visible=true;
 	self.searchResults ='';
 
@@ -23,6 +24,9 @@ function movieController (Movie) {
 				self.movieResults = JSON.parse(res.data)
 				console.log(self.movieResults)
 			})
+	}
+	self.showSimilar = function () {
+		console.log
 	}
 	self.printMovieResults = function() {
 		console.log(self.movieResults);
