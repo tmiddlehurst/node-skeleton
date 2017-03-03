@@ -118,7 +118,16 @@ button {
 .card-img-top {
 	width: 201px;
 	height: 298px;
-	margin-left: 10%;
+}
+#selectedFavouriteMovie {
+	margin-bottom: 50px;
+}
+.similarMoviePoster {
+	width: 133px;
+	height: 200px;
+}
+img {
+	margin: auto;
 }
 
 

@@ -1,16 +1,36 @@
 <section id="showSimilar">
 	<p>Showing similar movies to {{movieCTRL.movieResults.results.title}}
 	</p>
-	<div class="row" id="selectedFavouriteMovie">
-		<div>
-			<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
-		</div>
+	<div id="selectedFavouriteMovie">
+		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
 	</div>
-	<div 
-		class="row"
-		id="similarMovies"
-		ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 5">
-			bla bla bla bla bla</div>
+	<div class="row" id="similarMovies">
+		<div 
+		class="card col-xs-2" 
+		ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 6">
+		<!-- movie poster -->
+			<img 
+		  	class="similarMoviePoster img"
+		  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
+		  	alt="{{movie.title}} movie poster">
+		  	<!-- movie info -->
+	  	<div class="card-block">
+	  		<p class="card-title">
+	  			<strong>Title: </strong>
+	  			{{movie.title}}
+				</p>
+				<p class="card-text">
+					<strong>Year: </strong><span>{{movie.release_date.substr(0,4)}}</span>
+				</p>
+				<p class="card-text">
+	    		<strong>Avg. Rating: </strong>
+	    		<span>{{movie.vote_average}}</span>
+	    		<span>({{movie.vote_count}} votes)</span>
+	  		</p>
+	  	</div>
+		</div>
+
+	</div>
 
 
 </section>
