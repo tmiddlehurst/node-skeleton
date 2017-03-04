@@ -7,54 +7,28 @@
 		class="btn btn-primary btn-sm"> MOVIE MODAL
 	</button>
 
-	<p>Showing similar movies to {{movieCTRL.movieResults.results.title}}
+	<p>Showing similar movies to <strong>{{movieCTRL.selected.title}}</strong>
 	</p>
 
 	<div id="selectedFavouriteMovie">
 		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
 	</div>
-	
+
+	<!-- similar movies -->
 	<div class="row" id="similarMovies">
-
-		<div 
-			ng-if="!movieCTRL.visible"
-			class="modal">
-
-			<div class="modal-dialogue">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button ng-click="movieCTRL.showContent()"class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">
-							Movie Title
-						</h4>
-					</div>
-					<div class="modal-body">
-						<p>year</p>
-						<p>description</p>
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-primary"> Add to watch list</button>
-						<button
-							class="btn btn-primary"
-							data-dismiss="modal"
-							ng-click="movieCTRL.showContent()">close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		<!-- Card -->
 		<div 
 			class="card col-xs-2" 
 			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 6"
-			ng-click="movieCTRL.showContent()">
+			ng-click="movieCTRL.modalContent()">
 
-		<!-- movie poster -->
+			<!-- movie poster -->
 			<img 
 		  	class="similarMoviePoster img"
 		  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
 		  	alt="{{movie.title}} movie poster">
-		  	<!-- movie info -->
+
+		  <!-- movie info -->
 	  	<div class="card-block">
 	  		<p class="card-title">
 	  			<strong>Title: </strong>
@@ -73,6 +47,36 @@
 					class="btn btn-primary btn-sm"> MOVIE MODAL
 				</button>
 	  	</div>
+
+	  	<!-- modal -->
+			<div 
+				ng-if="!movieCTRL.visible"
+				class="modal">
+
+				<div class="modal-dialogue">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button ng-click="movieCTRL.showContent()"class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">
+								{{ movieCTRL.modalTarget.title }}
+							</h4>
+						</div>
+						<div class="modal-body">
+							<p>year</p>
+							<p>description</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-primary"> Add to watch list</button>
+							<button
+								class="btn btn-primary"
+								data-dismiss="modal"
+								ng-click="movieCTRL.showContent()">close
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+
 		</div>
 
 	</div>

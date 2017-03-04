@@ -28,7 +28,9 @@ function movieController (Movie) {
 // Store id of selected favourite movie
 	self.storeId = function (movie) {
 		self.selected = movie
+		console.log(movie)
 		self.selectedId = movie.id
+		console.log(movie.id)
 
 		// Find similar movies to selected movie
 		Movie.showSimilar({ id: self.selectedId})
@@ -38,8 +40,9 @@ function movieController (Movie) {
 			})
 	}
 	self.modalContent = function (movie) {
-		self.modalTarget = movie
-		console.log(modalTarget)
+		self.modalTarget = movie;
+		console.log(self.modalTarget);
+		self.showContent();
 	}
 
 // Show/hide content
