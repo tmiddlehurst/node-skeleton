@@ -5,6 +5,11 @@ body, section, div {
 	font-family: "Helvetica neue";
 }
 
+div#selectedFavouriteMovie {
+	margin: 0 auto !important;
+	margin-bottom: 50px;
+}
+
 a {
 	font-family: "Komoda"; Trebuchet MS;
 	font-size: 200%;
@@ -119,9 +124,7 @@ button {
 	width: 201px;
 	height: 298px;
 }
-#selectedFavouriteMovie {
-	margin-bottom: 50px;
-}
+
 .similarMoviePoster {
 	width: 133px;
 	height: 200px;

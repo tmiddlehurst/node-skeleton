@@ -11,6 +11,7 @@ function movieController (Movie) {
 	self.selectedId ='';
 	self.similarMovies = '';
 
+	self.passedMovie ='';
 	self.modalTarget = '';
 
 	self.visible = true;
@@ -21,27 +22,24 @@ function movieController (Movie) {
 			.then(function (res) {
 				self.showContent();
 				self.movieResults = JSON.parse(res.data)
-				console.log(self.movieResults)
 			})
 	}
 
 // Store id of selected favourite movie
 	self.storeId = function (movie) {
 		self.selected = movie
-		console.log(movie)
 		self.selectedId = movie.id
-		console.log(movie.id)
 
 		// Find similar movies to selected movie
 		Movie.showSimilar({ id: self.selectedId})
 			.then (function (res) {
 				self.similarMovies = JSON.parse(res.data)
-				console.log(self.similarMovies)
 			})
 	}
+
+// Content to be shown in modal
 	self.modalContent = function (movie) {
 		self.modalTarget = movie;
-		console.log(self.modalTarget);
 		self.showContent();
 	}
 
