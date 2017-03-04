@@ -24,7 +24,8 @@
   	<!-- modal -->
 		<div 
 			ng-if="!movieCTRL.visible"
-			class="modal">
+			class="modal"
+			ng-init="trailerKey=movieCTRL.modalVideo.results[0].key">
 
 			<div class="modal-dialogue">
 
@@ -51,6 +52,7 @@
 							{{movieCTRL.modalTarget.vote_average}}
 							({{movieCTRL.modalTarget.vote_count}} votes)
 						</p>
+						<a href='https://www.youtube.com/watch?v={{trailerKey}}' alt>Trailer Link</a>
 					</div>
 
 					<div class="modal-footer">

@@ -4,7 +4,7 @@ var baseUrlSearch = 'https://api.themoviedb.org/3/search/movie?api_key=' + api_k
 var movieController = require('../controllers/movie.js');
 var baseUrlMovieMethods = 'https://api.themoviedb.org/3/movie/';
 var extraUrlShowSimilar = '/similar?api_key=' + api_key + '&language=en-US';
-var extraUrlGetTrailer = '/videos?' + api_key + '&language=en-US';
+var extraUrlGetTrailer = '/videos?api_key=' + api_key + '&language=en-US';
 
 
 function search (req, res) {
@@ -45,9 +45,6 @@ function getTrailer (req, res) {
 		return res.json(body)
 	})
 }
-
-
-
 
 
 module.exports = {

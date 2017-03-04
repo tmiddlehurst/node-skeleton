@@ -13,7 +13,7 @@ function movieController (Movie) {
 
 	self.passedMovie ='';
 	self.modalTarget = '';
-	self.modalVideos = '';
+	self.modalVideo = '';
 
 	self.visible = true;
 

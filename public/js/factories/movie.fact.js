@@ -10,7 +10,7 @@ function movieFactory (API, $http) {
 			return $http.post(API + '/showsimilar', request)
 		},
 		getTrailer: function (request) {
-			return $http.post(API + '/showsimilar', request)
+			return $http.put(API + '/showsimilar', request)
 		}
 	}
 }
