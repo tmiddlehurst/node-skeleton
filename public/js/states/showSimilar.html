@@ -1,31 +1,29 @@
-<section id="showSimilar" ng-init="showModal = false">
+<section id="showSimilar" ng-init="movieCTRL.resetVisibility()">
 
-<div class="greyBox" ng-if="showModal"></div>
+	<div class="greyBox" ng-if="!movieCTRL.visible"></div>
+
+	<button 
+		ng-click="movieCTRL.showContent()"
+		class="btn btn-primary btn-sm"> MOVIE MODAL
+	</button>
 
 	<p>Showing similar movies to {{movieCTRL.movieResults.results.title}}
 	</p>
+
 	<div id="selectedFavouriteMovie">
 		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
 	</div>
-	<div>
-
-		<button 
-			ng-click="showModal = !showModal"
-			class="btn btn-primary btn-sm" 
-			data-target="#movieMoreInfo" 
-			data-toggle="modal"> MOVIE MODAL
-		</button>
+	
+	<div class="row" id="similarMovies">
 
 		<div 
-			class="modal" 
-			ng-class="{ 'show-modal': showModal}" 
-			id="movieMoreInfo" 
-			tabindex="-1">
+			ng-if="!movieCTRL.visible"
+			class="modal">
 
 			<div class="modal-dialogue">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button ng-click="showModal = !showModal"class="close" data-dismiss="modal">&times;</button>
+						<button ng-click="movieCTRL.showContent()"class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">
 							Movie Title
 						</h4>
@@ -39,17 +37,18 @@
 						<button
 							class="btn btn-primary"
 							data-dismiss="modal"
-							ng-click="showModal = !showModal">close
+							ng-click="movieCTRL.showContent()">close
 						</button>
-						
 					</div>
 				</div>
 			</div>
-	</div>
-	<div class="row" id="similarMovies">
+		</div>
+
 		<div 
-		class="card col-xs-2" 
-		ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 6">
+			class="card col-xs-2" 
+			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 6"
+			ng-click="movieCTRL.showContent()">
+
 		<!-- movie poster -->
 			<img 
 		  	class="similarMoviePoster img"
@@ -69,10 +68,13 @@
 	    		<span>{{movie.vote_average}}</span>
 	    		<span>({{movie.vote_count}} votes)</span>
 	  		</p>
+				<button 
+					ng-click="movieCTRL.showVisible()"
+					class="btn btn-primary btn-sm"> MOVIE MODAL
+				</button>
 	  	</div>
 		</div>
 
 	</div>
-
 
 </section>

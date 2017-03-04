@@ -11,6 +11,8 @@ function movieController (Movie) {
 	self.selectedId ='';
 	self.similarMovies = '';
 
+	self.modalTarget = '';
+
 	self.visible = true;
 
 // Search for favourite movie
@@ -24,9 +26,9 @@ function movieController (Movie) {
 	}
 
 // Store id of selected favourite movie
-	self.storeId = function (individualMovie) {
-		self.selected = individualMovie
-		self.selectedId = individualMovie.id
+	self.storeId = function (movie) {
+		self.selected = movie
+		self.selectedId = movie.id
 
 		// Find similar movies to selected movie
 		Movie.showSimilar({ id: self.selectedId})
@@ -35,13 +37,18 @@ function movieController (Movie) {
 				console.log(self.similarMovies)
 			})
 	}
+	self.modalContent = function (movie) {
+		self.modalTarget = movie
+		console.log(modalTarget)
+	}
 
 // Show/hide content
 
-		self.showContent = function () {
-		console.log(self.visible);
-		self.visible = false;
-		console.log(self.visible);
+	self.resetVisibility = function () {
+		self.visible = true
+	}
+	self.showContent = function () {
+		self.visible = !self.visible;
 	}
 
 }
