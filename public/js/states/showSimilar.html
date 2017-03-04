@@ -4,12 +4,19 @@
 	<div class="greyBox" ng-if="!movieCTRL.visible"></div>
 
 	<!-- selected movie tings -->
-	<p>Showing similar movies to <strong>{{movieCTRL.selected.title}}</strong>
-	</p>
 
 	<div id="selectedFavouriteMovie">
 		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
 	</div>
+
+	<p 
+	class="centeredText"
+	ng-if="movieCTRL.selected">
+
+		similar movies to
+		<strong>{{movieCTRL.selected.title}}</strong>
+		
+	</p>
 
 	<!-- similar movies -->
 	<div class="row" id="similarMovies">
