@@ -27,8 +27,8 @@ router.route('/search')
 	.post(movieController.search)
 
 router.route('/showsimilar')
-  .post(movieController.showSimilar)
-
+  .put(movieController.getTrailer)
+  .post(movieController.showSimilar);
 
 
 module.exports = router

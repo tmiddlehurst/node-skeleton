@@ -8,6 +8,9 @@ function movieFactory (API, $http) {
 		},
 		showSimilar: function (request) {
 			return $http.post(API + '/showsimilar', request)
+		},
+		getTrailer: function (request) {
+			return $http.post(API + '/showsimilar', request)
 		}
 	}
 }

@@ -37,7 +37,7 @@
 			class="card col-xs-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
 			ui-sref="showSimilar"
-			ng-click="movieCTRL.storeId(movie)">
+			ng-click="movieCTRL.getSimilar(movie)">
 			<img 
 			  	class="card-img-top"
 			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
