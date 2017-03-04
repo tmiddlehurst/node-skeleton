@@ -32,7 +32,7 @@
 	</div>		
 	<!-- Search Results -->
 	<div class="row">
-		<h2 ng-if="!movieCTRL.visible"> displaying results for "{{movieCTRL.searchTerm}}"</h2>
+		<p ng-if="!movieCTRL.visible" class="centeredText">Choose favourite from results to see similar</p>
 		<div 
 			class="card col-xs-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
