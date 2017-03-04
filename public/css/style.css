@@ -127,13 +127,29 @@ button {
 	height: 200px;
 }
 img {
-	margin: auto;
+    margin: 0 auto;
+    display: block !important;
+}
+
+.show-modal {
+    display: block !important;
+    top: 30%;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
 
-
-
+.greyBox {
+    position: absolute;
+    background: black;
+    height: 100000px;
+    width: 100%;
+    opacity: 0.8;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
 
 
 

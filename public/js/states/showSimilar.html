@@ -1,8 +1,50 @@
-<section id="showSimilar">
+<section id="showSimilar" ng-init="showModal = false">
+
+<div class="greyBox" ng-if="showModal"></div>
+
 	<p>Showing similar movies to {{movieCTRL.movieResults.results.title}}
 	</p>
 	<div id="selectedFavouriteMovie">
 		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
+	</div>
+	<div>
+
+		<button 
+			ng-click="showModal = !showModal"
+			class="btn btn-primary btn-sm" 
+			data-target="#movieMoreInfo" 
+			data-toggle="modal"> MOVIE MODAL
+		</button>
+
+		<div 
+			class="modal" 
+			ng-class="{ 'show-modal': showModal}" 
+			id="movieMoreInfo" 
+			tabindex="-1">
+
+			<div class="modal-dialogue">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button ng-click="showModal = !showModal"class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">
+							Movie Title
+						</h4>
+					</div>
+					<div class="modal-body">
+						<p>year</p>
+						<p>description</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary"> Add to watch list</button>
+						<button
+							class="btn btn-primary"
+							data-dismiss="modal"
+							ng-click="showModal = !showModal">close
+						</button>
+						
+					</div>
+				</div>
+			</div>
 	</div>
 	<div class="row" id="similarMovies">
 		<div 
