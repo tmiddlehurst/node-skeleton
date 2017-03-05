@@ -6,6 +6,8 @@ body, section, div {
 }
 
 div#selectedFavouriteMovie {
+	z-index: 2 !important;
+	width: 100% !important;
 	margin: 0 auto !important;
 	margin-bottom: 50px;
 }
@@ -46,10 +48,10 @@ header {
 	display: inline-block;
 	border-bottom: 1px solid #dee;
 }
-main {
-	height: 90%;
-	width: 100%;
-}
+/*main {
+	height: 80% !important;
+	width: 90% !important;
+}*/
 .navHome {
 	margin: 1.5%;
 	display: inline-block;
@@ -75,8 +77,8 @@ main {
 }
 
 .centeredText {
+	display: inline-block;
 	padding: 25px 0px 25px 0px;
-	margin: auto;
 	font-size: 150%;
 	text-align: center;
 }
@@ -123,10 +125,7 @@ form div {
 button {
 	margin: auto; 
 }
-.card {
-	border: 1px solid #dee;
-	margin: 5px;
-}
+
 .card-img-top {
 	width: 201px;
 	height: 298px;
@@ -138,26 +137,48 @@ button {
 }
 img {
     margin: 0 auto;
+    padding: 5pxm;
     display: block !important;
+}
+.backdropImageTop {
+/*    width: 80vw !important;*/
+/*    opacity: 0.4;*/
+/*    z-index: -1;*/
+/*    position: absolute;*/
 }
 
 
 .greyBox {
     position: absolute;
-    background: black;
+    background: grey;
+    background-size: contain;
     width: 100%;
-    height: 300%;
-    opacity: 0.8;
+    height: 100%;
+    position: fixed;
+    opacity: 1;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+}
+.modalBackgroundImage {
+    position: absolute;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    z-index: 3;
+
 }
 .modal {
     display: block !important;
-    top: 30%;
+    top: 40%;
     width: 60%;
     margin: 0 auto;
-    z-index: 3;
+    z-index: 4;
+    position: fixed;
 }
 
 

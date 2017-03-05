@@ -33,6 +33,7 @@
 	<!-- Search Results -->
 	<div class="row">
 		<p ng-if="!movieCTRL.visible" class="centeredText">Choose favourite from results to see similar</p>
+		<br>
 		<div 
 			class="card col-xs-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"

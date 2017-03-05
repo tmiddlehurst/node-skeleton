@@ -48,6 +48,7 @@ function movieController (Movie) {
 		Movie.getTrailer({ id: self.modalTargetId})
 			.then (function (res) {
 				self.modalVideo = JSON.parse(res.data)
+				self.trailerKey = modalVideo.results[0].key
 				console.log(self.modalVideo)
 			})
 	}

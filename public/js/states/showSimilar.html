@@ -1,12 +1,18 @@
 <section id="showSimilar" ng-init="movieCTRL.resetVisibility()">
 
 <!-- grey-out effect for modal -->
-	<div class="greyBox" ng-if="!movieCTRL.visible"></div>
+	<div 
+		class="greyBox"
+		ng-if="!movieCTRL.visible">
+
+		<div class="modalBackgroundImage" ng-style="{'background-image': 'url(https://image.tmdb.org/t/p/w640/{{ movieCTRL.modalTarget.backdrop_path }})'}"></div>
+		
+	</div>
 
 	<!-- selected movie tings -->
 
 	<div id="selectedFavouriteMovie">
-		<img ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
+		<img class="backdropImageTop" ng-src="https://image.tmdb.org/t/p/w640/{{movieCTRL.selected.backdrop_path}}">
 	</div>
 
 	<p 
@@ -19,42 +25,45 @@
 	</p>
 
 	<!-- similar movies -->
-	<div class="row" id="similarMovies">
+	<div class="card-group" id="similarMovies">
 
   	<!-- modal -->
 		<div 
 			ng-if="!movieCTRL.visible"
-			class="modal"
-			ng-init="trailerKey=movieCTRL.modalVideo.results[0].key">
+			class="modal">
 
 			<div class="modal-dialogue">
 
 				<div class="modal-content">
-
+					<!-- header - movie title -->
 					<div class="modal-header">
 						<button ng-click="movieCTRL.showContent()"class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">
 							{{ movieCTRL.modalTarget.title }}
 						</h4>
 					</div>
-
+					<!-- body - movie info -->
 					<div class="modal-body">
+						<!-- year -->
 						<p>
 							<strong>Year: </strong>
 							{{ movieCTRL.modalTarget.release_date.substr(0,4) }}
 						</p>
+						<!-- overview -->
 						<p>
 							<strong>Overview:</strong>
 							{{ movieCTRL.modalTarget.overview }}
 						</p>
+						<!-- rating -->
 						<p>
 							<strong>Rating: </strong>
 							{{movieCTRL.modalTarget.vote_average}}
 							({{movieCTRL.modalTarget.vote_count}} votes)
 						</p>
-						<a href='https://www.youtube.com/watch?v={{trailerKey}}' alt>Trailer Link</a>
+<!--	ERROR HERE ====== youtube embed -->
+<!-- 						<iframe src="{{ movieCTRL.trailerKey | youtubeEmbedUrl }}"></iframe> -->
 					</div>
-
+					<!-- footer - buttons -->
 					<div class="modal-footer">
 						<button class="btn btn-primary"> Add to watch list</button>
 						<button
@@ -67,15 +76,15 @@
 			</div>	
 		</div>
 		<!-- Card -->
-		<button 
+		<div 
 			href="#"
-			class="card col-xs-2" 
-			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 6"
+			class="card col-xs-3" 
+			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 8"
 			ng-click="movieCTRL.modalContent(movie)">
 
 			<!-- movie poster -->
 			<img 
-		  	class="similarMoviePoster img"
+		  	class="similarMoviePoster"
 		  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
 		  	alt="{{movie.title}} movie poster">
 
@@ -98,13 +107,14 @@
 	  		</p>
 	  	</div>
 
-		</button>
+		</div>
 
 	</div>
+	<div class="row"></div>
 	<!-- search again -->
-	<button 
-		href="#"
-		ui-sref="search"
-		class="btn btn-primary btn-sm"> Search Again
-	</button>
+		<button 
+			href="#"
+			ui-sref="search"
+			class="btn btn-primary btn-sm"> Search Again
+		</button>
 </section>
