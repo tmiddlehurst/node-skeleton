@@ -78,7 +78,7 @@
 		<!-- Card -->
 		<div 
 			href="#"
-			class="card col-xs-3" 
+			class="card text-center col-xs-3" 
 			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 8"
 			ng-click="movieCTRL.modalContent(movie)">
 
@@ -110,11 +110,18 @@
 		</div>
 
 	</div>
-	<div class="row"></div>
+	<footer class="notSatisfiedRow">
 	<!-- search again -->
-		<button 
+		<span class="notSatisfied"> Don't see anything you like? Move on to the </span>
+		<a
+			href="#"
+			class="btn btn-lg notSatisfied"> next step 
+		</a>
+		<span class="notSatisfied"> Or </span>
+		<a
 			href="#"
 			ui-sref="search"
-			class="btn btn-primary btn-sm"> Search Again
-		</button>
+			class="btn btn-lg notSatisfied"> search again
+		</a>
+	</footer>
 </section>
