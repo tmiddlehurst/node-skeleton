@@ -180,20 +180,24 @@ img {
     z-index: 4;
     position: fixed;
 }
+.notSatisfiedRow {
+	border-top: 1px solid #dee;
+	width: 100%;
+	display: inline-block;
+	margin-top: 25px;
+
+}
 span.notSatisfied {
 	display: inline-block;
 	word-spacing: 2.5px;
-	padding: 50px 15px;
-	font-size: 150%;
+	padding: 30px 15px;
+	font-size: 18px;
 }
 a.notSatisfied {
-	font-size: 300%;
+	font-size: 36px;
 	font-weight: bold;
-	padding: 0.5% 1.5%;
+	padding: 5px 15px;
 	background-color: #dee;
-}
-.notSatisfiedRow {
-	border-top: 1px solid #dee;
 }
 
 
