@@ -59,8 +59,7 @@ header {
 	display: inline-block;
 	float: left;
 	text-align: center;
-	padding:  5px;
-	width: 20%;
+	padding:  0 10%;
 }
 
 span.navLink {
@@ -69,7 +68,6 @@ span.navLink {
 .navLink {
 	padding: 5px;
 	font-size: 3rem;
-	width: 22.5%;
 	margin: 1.5%;
 	display: inline-block;
 	float: right;
@@ -132,7 +130,9 @@ form div {
 button {
 	margin: auto; 
 }
-
+p.card-title {
+	height: 30px;
+}
 .card-img-top {
 	width: 201px;
 	height: 298px;
