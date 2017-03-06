@@ -46,6 +46,11 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       url:'/showsimilar',
       templateUrl: '/js/states/showsimilar.html',
       resolve: authRequired
-    })    
+    })
+    .state('customSearch', {
+      url: '/customsearch',
+      templateUrl: 'js/states/customsearch.html',
+      resolve: authRequired
+    })
 
 }	

@@ -5,7 +5,7 @@
 		<p 
 			class="centeredText"
 			ng-if="movieCTRL.visible">
-			to get started, enter your favourite film.
+			To get started, enter a film name
 		</p>
 		<br>
 		<form
@@ -13,11 +13,11 @@
 			class="col-md-6 col-md-offset-3 form-inline" 
 			ng-if="auth.user">
 			<div class="form-group">
-				<label for="favouriteMovie">Favourite movie:</label>
+				<label for="favouriteMovie">film name:</label>
 				<input
 					id="favouriteMovie"
 					type="string"
-					placeholder="Enter movie"
+					placeholder="film"
 					ng-model="movieCTRL.searchTerm">
 			</div>
 			<button
@@ -32,7 +32,7 @@
 	</div>		
 	<!-- Search Results-->
 	<div class="row card-group">
-		<p ng-if="!movieCTRL.visible" class="centeredText">choose favourite from results to see similar movies</p>
+		<p ng-if="!movieCTRL.visible" class="centeredText">choose from results to see similar movies</p>
 		<br>
 		<div 
 			class="card text-center col-md-3" 
@@ -58,7 +58,7 @@
 		  	</div>
 		</div>
 	</div>
-	<div ng-if="!movieCTRL.visible">
+	<div id="searchAgain" ng-if="!movieCTRL.visible">
 		<a href="#search" class="btn blueBtn" > Search Again</a>
 	</div>
 </section>

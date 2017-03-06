@@ -60,12 +60,13 @@
 							{{movieCTRL.modalTarget.vote_average}}
 							({{movieCTRL.modalTarget.vote_count}} votes)
 						</p>
-<!--	ERROR HERE ====== youtube embed -->
-<!-- 						<iframe src="{{ movieCTRL.trailerKey | youtubeEmbedUrl }}"></iframe> -->
+					<!-- youtube embed -->
+						<iframe src="{{ movieCTRL.trailerKey | youtubeEmbedUrl }}"></iframe>
 					</div>
 					<!-- footer - buttons -->
 					<div class="modal-footer">
-						<a class="btn blueBtn"> Add to watch list</a>
+						<!-- <a class="btn blueBtn"> Add to watch list</a> -->
+						<br>
 						<a
 							class="btn blueBtn"
 							data-dismiss="modal"
@@ -78,7 +79,7 @@
 		<!-- Card -->
 		<div 
 			href="#"
-			class="card text-center col-xs-4" 
+			class="card text-center col-md-3" 
 			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 8"
 			ng-click="movieCTRL.modalContent(movie)">
 
@@ -111,12 +112,14 @@
 	</div>
 	<!-- Not satisfied with similar movies -->
 	<div class="notSatisfiedRow">
-		<span class="notSatisfied"> Don't see anything you like? try a </span>
+		<span class="notSatisfied"> Don't see anything you like?
+		</span>
+		<br>
 		<a
 			href="#"
-			class="btn btn-lg blueBtn notSatisfied"> custom search 
+			class="btn btn-lg blueBtn notSatisfied"
+			ui-sref="customSearch"> custom search 
 		</a>
-		<span class="notSatisfied"> Or </span>
 		<a
 			href="#"
 			ui-sref="search"
