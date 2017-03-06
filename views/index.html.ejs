@@ -62,22 +62,18 @@
           <span>Home</span>
         </a>
         <div ng-if="auth.user">
-<!--           <strong>WELCOME {{ auth.user.email }} </strong>
-          <br> -->
           <a class="navLink" href="#" ng-click="auth.signOut()">
-            <span class="fa fa-home" aria-hidden="true"></span>
+            <span class="fa fa-sign-out" aria-hidden="true"></span>
             <br>
             <span>Sign Out</span>
           </a>
-          <a class="navLink" href="#" ng-click="auth.signOut()">
-            <span class="fa fa-user" aria-hidden="true"></span>
+          <a class="navLink" href="#" ng-click="">
+            <span class="fa fa-list-ul" aria-hidden="true"></span>
             <br>
-            <span>Profile</span>
+            <span>Watch List</span>
           </a>
         </div>
         <div ng-if="!auth.user">
-<!--           <strong>Welcome New Person!</strong>
-          <br> -->
           <a class="navLink" href="#" ui-sref="signup">
             <span class="fa fa-user-plus" aria-hidden="true"></span>
             <br>
