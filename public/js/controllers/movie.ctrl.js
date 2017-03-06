@@ -52,6 +52,10 @@ function movieController (Movie) {
 				console.log(self.trailerKey)
 			})
 	}
+//reload state
+	self.reloadState = function () {
+		$state.reload()
+	}
 
 // Show/hide content
 
