@@ -9,7 +9,7 @@ var app            = express();
 
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/takeOneDb');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/takeOneDb');
 app.set('view engine', ejs);
 
 
