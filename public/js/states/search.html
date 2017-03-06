@@ -5,12 +5,12 @@
 		<p 
 			class="centeredText"
 			ng-if="movieCTRL.visible">
-			To get started, enter your favourite film.
+			to get started, enter your favourite film.
 		</p>
 		<br>
 		<form
 			id="searchBar"
-			class="col-md-8 col-md-offset-2 form-inline" 
+			class="col-md-6 col-md-offset-2 form-inline" 
 			ng-if="auth.user">
 			<div class="form-group">
 				<label for="favouriteMovie">Favourite movie:</label>
@@ -30,12 +30,12 @@
 			</p>
 		</form>
 	</div>		
-	<!-- Search Results -->
-	<div class="row">
-		<p ng-if="!movieCTRL.visible" class="centeredText">Choose favourite from results to see similar</p>
+	<!-- Search Results-->
+	<div class="row card-group">
+		<p ng-if="!movieCTRL.visible" class="centeredText">choose favourite from results to see similar movies</p>
 		<br>
 		<div 
-			class="card col-xs-3" 
+			class="card text-center col-md-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
 			ui-sref="showSimilar"
 			ng-click="movieCTRL.getSimilar(movie)">
@@ -45,11 +45,10 @@
 			  	alt="{{movie.title}} Movie Poster">
 		  	<div class="card-block">
 		  		<p class="card-title">
-		  			<strong>Title: </strong>
-		  			{{movie.title}}
+		  			<strong> {{movie.title}} </strong>
 	  			</p>
 	  			<p class="card-text">
-	  				<strong>Year: </strong><span>{{movie.release_date.substr(0,4)}}</span>
+	  				<span>{{movie.release_date.substr(0,4)}}</span>
   				</p>
 	  			<p class="card-text">
 		    		<strong>Avg. Rating: </strong>
@@ -58,5 +57,8 @@
 	    		</p>
 		  	</div>
 		</div>
+	</div>
+	<div ng-if="!movieCTRL.visible">
+		<a href="#" ui-sref="search" class="btn blueBtn" > Search Again</a>
 	</div>
 </section>

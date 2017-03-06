@@ -65,12 +65,12 @@
 					</div>
 					<!-- footer - buttons -->
 					<div class="modal-footer">
-						<button class="btn btn-primary"> Add to watch list</button>
-						<button
-							class="btn btn-primary"
+						<a class="btn blueBtn"> Add to watch list</a>
+						<a
+							class="btn blueBtn"
 							data-dismiss="modal"
 							ng-click="movieCTRL.showContent()">close
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>	
@@ -78,7 +78,7 @@
 		<!-- Card -->
 		<div 
 			href="#"
-			class="card text-center col-xs-3" 
+			class="card text-center col-xs-4" 
 			ng-repeat="movie in movieCTRL.similarMovies.results | limitTo: 8"
 			ng-click="movieCTRL.modalContent(movie)">
 
@@ -92,8 +92,7 @@
 	  	<div class="card-block">
 
 	  		<p class="card-title">
-	  			<strong>Title: </strong>
-	  			{{movie.title}}
+	  			<strong> {{movie.title}} </strong>
 				</p>
 
 				<p class="card-text">
@@ -115,13 +114,13 @@
 		<span class="notSatisfied"> Don't see anything you like? Move on to the </span>
 		<a
 			href="#"
-			class="btn btn-lg notSatisfied"> next step 
+			class="btn btn-lg blueBtn notSatisfied"> next step 
 		</a>
 		<span class="notSatisfied"> Or </span>
 		<a
 			href="#"
 			ui-sref="search"
-			class="btn btn-lg notSatisfied"> search again
+			class="btn btn-lg blueBtn notSatisfied"> search again
 		</a>
 	</div>
 </section>
