@@ -53,7 +53,7 @@ function movieController (Movie) {
 			})
 	}
 //reload state
-	self.reloadState = function () {
+	self.reloadState = function ($state) {
 		$state.reload()
 	}
 
