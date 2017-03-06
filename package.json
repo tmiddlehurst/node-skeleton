@@ -2,7 +2,7 @@
   "name": "what-do-i-watch",
   "version": "1.0.0",
   "main": "app.js",
- "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "postinstall": "bower install"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tmiddlehurst/what-to-watch#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "bower": "^1.8.0",
     "ejs": "^2.5.6",
