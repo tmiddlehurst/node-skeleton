@@ -1,6 +1,7 @@
 # TakeOne
+---------------
 ## What is it?
--------------
+
 A MEAN web app built to answer the question 'what should film should i watch?'.
 
 TakeOne is a project written as a test exercise during web development training at Sparta Global.
@@ -9,10 +10,11 @@ It uses npm and bower to install dependencies.
 
 For the full specification see the **Spec** section.
 
-For (installation instructions see **Installation**
+For installation instructions see **Installation.**
 
+-------
 ##Spec
-------
+
 ### Backend
 Must:
  - be built with Node.js and Express.
@@ -28,9 +30,9 @@ Must:
  - should run from a singular page.
  - have routing with ui-router displaying multiple html states for different 'pages'.
 
-
-##Installation
 --------------
+##Installation
+
 1. Clone this repo.
 2. In the command line:
   -> npm i -- save
@@ -38,12 +40,14 @@ Must:
 3. Spin up a local server. The app looks for port 3000 by default.
 4. Execute app.js in the root directory of the app (e.g. using nodemon or similar).
 
-##Authors
 --------
+##Authors
+
 Tom Middlehurst
 
-##Contact
 --------
+##Contact
+
 Tom Middlehurst
 Web Development Consultant
 Sparta Global
