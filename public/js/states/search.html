@@ -5,30 +5,33 @@
 		<p 
 			class="centeredText"
 			ng-if="movieCTRL.visible">
-			To get started, enter a film name
+			To get started, enter a movie name
 		</p>
 		<br>
-		<form
+		<card
 			id="searchBar"
-			class="col-md-6 col-md-offset-3 form-inline" 
+			class="col-md-6 col-md-offset-3  col-xs-8 col-xs-offset-2 text-center" 
 			ng-if="auth.user">
-			<div class="form-group">
-				<label for="favouriteMovie">film name:</label>
+			<div class="card-header">
+				<label for="movieSearch">search for:</label>
+			</div>
+			<div id="card-body">
 				<input
-					id="favouriteMovie"
+					id="movieSearch"
 					type="string"
-					placeholder="film"
+					placeholder="movie"
 					ng-model="movieCTRL.searchTerm">
 			</div>
-			<button
-				type="search"
-				href="#appStates"
-				class="btn btn-default"
-				ng-click="movieCTRL.search().arrayLength()">
-				Go
-			</button>
+			<div id="card-footer">
+				<a
+					type="search"
+					class="btn formBtn"
+					ng-click="movieCTRL.search().arrayLength()">
+					Go
+				</a>
+			</div>
 			</p>
-		</form>
+		</card>
 	</div>		
 	<!-- Search Results-->
 	<div class="row card-group">
@@ -42,10 +45,11 @@
 			<img 
 			  	class="card-img-top"
 			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
+			  	src="" 
 			  	alt="{{movie.title}} Movie Poster">
 		  	<div class="card-block">
 		  		<p class="card-title">
-		  			<strong> {{movie.title}} </strong>
+		  			<strong> {{ movie.title.substr(0,40) }} </strong>
 	  			</p>
 	  			<p class="card-text">
 	  				<span>{{movie.release_date.substr(0,4)}}</span>
@@ -59,6 +63,6 @@
 		</div>
 	</div>
 	<div id="searchAgain" ng-if="!movieCTRL.visible">
-		<a href="#" class="btn blueBtn" ng-click="movieCTRL.reloadState().resetVisibility()" > Search Again</a>
+		<a href="#" class="btn blueBtn" ng-click="movieCTRL.reloadState()" > Back to Top</a>
 	</div>
 </section>

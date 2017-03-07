@@ -21,7 +21,6 @@ function authenticationController (Auth, User, $state) {
 		Auth.$createUserWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
 				// resetCredentials();
-				console.log(user);
 				User.create({
 					uid: user.uid
 				}).then(function (dbUser) {
@@ -42,7 +41,6 @@ function authenticationController (Auth, User, $state) {
 	}
 
 	Auth.$onAuthStateChanged(function (user) {
-		console.log(user);
 		self.user = user;
 	})
 

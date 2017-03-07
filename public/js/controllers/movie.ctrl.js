@@ -7,6 +7,9 @@ function movieController (Movie) {
 	self.searchTerm = '';
 	self.searchResults ='';
 
+	self.search_poster_path = ''
+	self.similar_poster_path = ''
+
 	self.selected = '';
 	self.selectedId ='';
 	self.similarMovies = '';
