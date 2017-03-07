@@ -20,7 +20,7 @@ Must:
  - be built with Node.js and Express.
  - use a database and Mongoose.
  - have an API structure that uses JSOn to interact with the frontend.
- - enable user user authentication ith Angularfire.
+ - enable user user authentication with Angularfire.
  - follow a rMVC design structure.
  - interact with atleast one public API.
 
@@ -35,8 +35,11 @@ Must:
 
 1. Clone this repo.
 2. In the command line:
+
   -> npm i -- save
+
   -> bower i --save
+  
 3. Spin up a local server. The app looks for port 3000 by default.
 4. Execute app.js in the root directory of the app (e.g. using nodemon or similar).
 
