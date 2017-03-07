@@ -1,14 +1,12 @@
 # TakeOne
 ## What is it?
 -------------
-A MEAN web app built to answer the question 'what should film should i watch?'.
-
-TakeOne is a project written as a test exercise during web development training at Sparta Global.
-
-TakeOne runs with Node/Express server-side and Angular.js client-side.
-The app uses npm and bower to install dependencies.
-For the full specification see the *Spec* section.
-For installation instructions see *Installation*
+  A MEAN web app built to answer the question 'what should film should i watch?'.
+  TakeOne is a project written as a test exercise during web development training at Sparta Global.
+  TakeOne runs with Node/Express server-side and Angular.js client-side. 
+  The app uses npm and bower to install dependencies.
+  For the full specification see the **Spec** section.
+  For (installation instructions see **Installation**
 
 ##Spec
 ------
@@ -47,5 +45,5 @@ Tom Middlehurst
 Web Development Consultant
 Sparta Global
 tmiddlehurst@spartaglobal.co
-http://spartaglobal.com/contact-us/
+[Contact Sparta Global](http://spartaglobal.com/contact-us/)
 
