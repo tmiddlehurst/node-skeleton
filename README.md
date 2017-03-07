@@ -4,10 +4,8 @@
 A MEAN web app built to answer the question 'what should film should i watch?'.
 
 TakeOne is a project written as a test exercise during web development training at Sparta Global.
-
-TakeOne runs with Node/Express server-side and Angular.js client-side.
-
-The app uses npm and bower to install dependencies.
+The app runs with Node/Express server-side and Angular.js client-side.
+It uses npm and bower to install dependencies.
 
 For the full specification see the **Spec** section.
 
