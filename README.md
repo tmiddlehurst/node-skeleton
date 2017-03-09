@@ -58,6 +58,9 @@ tmiddlehurst@spartaglobal.co
 [Contact Sparta Global](http://spartaglobal.com/contact-us/)
 
 --------------
+#Codeship status
+
 ![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master)
+
 
 
