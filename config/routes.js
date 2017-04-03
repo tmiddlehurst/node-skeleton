@@ -3,29 +3,21 @@ var router = express.Router()
 var usersController = require('../controllers/users.js');
 var movieController = require('../controllers/movie.js');
 
-// http://127.0.0.1:3000/users
+// Create User
 router.route('/users')
   .post(usersController.create);
 
 
 router.route('/users/:id')
 
-  // GET return specific User
-  // .get(usersController.getUser)
 
-  // PATCH update existing User
-  // .patch(usersController.updateUser)
+ // ***custom routes***
 
-  // DELETE remove specific User from DB
-  // .delete(usersController.removeUser);
-
-  // .get(usersController.edit);
-
-
- // custom routes
+ // Movie search
 router.route('/search')
 	.post(movieController.search)
 
+// Get similar movies/get trailer
 router.route('/showsimilar')
   .put(movieController.getTrailer)
   .post(movieController.showSimilar);
