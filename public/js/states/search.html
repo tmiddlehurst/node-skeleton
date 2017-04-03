@@ -40,8 +40,8 @@
 		<div 
 			class="card text-center col-md-3" 
 			ng-repeat="movie in movieCTRL.movieResults.results | limitTo: 15"
-			ui-sref="show-similar"
-			ng-click="movieCTRL.getSimilar(movie)">
+			ng-click="movieCTRL.getSimilar(movie)"
+			ui-sref="show-similar">
 			<img 
 			  	class="card-img-top"
 			  	ng-src="https://image.tmdb.org/t/p/w640/{{movie.poster_path}}"
