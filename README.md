@@ -16,32 +16,30 @@ For installation instructions see **Installation.**
 ##Spec
 
 ### Backend
-Must:
- - be built with Node.js and Express.
- - use a database and Mongoose.
- - have an API structure that uses JSOn to interact with the frontend.
- - enable user user authentication with Angularfire.
- - follow a rMVC design structure.
- - interact with atleast one public API.
+ - Built with Node.js and Express.
+ - Uses a database and Mongoose.
+ - Has an API structure that uses JSOn to interact with the frontend.
+ - Enables user user authentication with Angularfire.
+ - Follows an rMVC design structure.
+ - Interacts with a public API.
 
 ### Frontend
-Must:
- - be built with angular 1.
- - should run from a singular page.
- - have routing with ui-router displaying multiple html states for different 'pages'.
+ - Built with angular 1.
+ - Runs from a singular page.
+ - Has routing with ui-router displaying multiple html states for different 'pages'.
 
 --------------
 ##Installation
 
 1. Clone this repo.
-2. In the command line:
+2. Install dependencies -- In the command line:
 
   -> npm i -- save
 
-  -> bower i --save
+  -> bower i --save 
   
 3. Spin up a local server. The app looks for port 3000 by default.
-4. Execute app.js in the root directory of the app (e.g. using nodemon or similar).
+4. Execute app.js in the root directory of the app (e.g. using nodemon).
 
 --------
 ##Authors
@@ -58,9 +56,6 @@ tmiddlehurst@spartaglobal.co
 [Contact Sparta Global](http://spartaglobal.com/contact-us/)
 
 --------------
-#Codeship status
-
-![Codeship Status](https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master)
 
 
 
