@@ -7,11 +7,10 @@ var movieController = require('../controllers/movie.js');
 router.route('/users')
   .post(usersController.create);
 
-
 router.route('/users/:id')
 
 
- // ***custom routes***
+ // ******* custom routes ******* //
 
  // Movie search
 router.route('/search')

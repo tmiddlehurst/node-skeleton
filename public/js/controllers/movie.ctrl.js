@@ -14,14 +14,15 @@ function movieController (Movie) {
 	self.selectedId ='';
 	self.similarMovies = '';
 
-	self.passedMovie ='';
 	self.modalTarget = '';
 	self.modalVideo = '';
 
 	self.visible = true;
 
-// Search for favourite movie
+// Search for movie
 	self.search = function () {
+	
+		// set 'term' of the req.body object
 		Movie.search({ term: self.searchTerm})
 			.then(function (res) {
 				self.showContent();
@@ -30,12 +31,14 @@ function movieController (Movie) {
 	}
 // Get Similar movies
 	self.getSimilar = function (movie) {
-		// Store id of selected favourite movie
+
+		// Store id of selected movie
 		self.selected = movie
 		self.selectedId = movie.id
 
 		// Find similar movies to selected movie
-		Movie.showSimilar({ id: self.selectedId})
+			// set 'id' of req.body object
+		Movie.showSimilar({ id: self.selected.id})
 			.then (function (res) {
 				self.similarMovies = JSON.parse(res.data)
 			})
@@ -48,6 +51,7 @@ function movieController (Movie) {
 		self.showContent();
 
 		// Get Trailer of movie
+			// set 'id' of req.body object
 		Movie.getTrailer({ id: self.modalTargetId})
 			.then (function (res) {
 				self.modalVideo = JSON.parse(res.data)
